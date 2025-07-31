@@ -64,3 +64,55 @@ The following endpoints are available:
 ## Postman Collection
 
 A Postman collection is provided in this repository. You can import the `shopping-cart-api.json` file into Postman to easily test all the API endpoints. It includes environment variables for `baseUrl` and `authToken` for a streamlined testing experience.
+# Shopping Cart App - Frontend
+
+This is the frontend for the shopping cart application, built as a single-page web app to interact with the Go backend API.
+
+The application follows the user flow described in the project:
+1.  [cite_start]A user can log in with their username and password[cite: 9]. [cite_start]If login fails, an alert is shown[cite: 9].
+2.  [cite_start]On successful login, the user is taken to the List Items screen[cite: 9, 11].
+3.  From the List Items screen, the user can:
+    * [cite_start]Add items to their cart by clicking on them[cite: 13].
+    * View all items in their cart via a "Cart" button.
+    * View their placed orders via an "Order History" button.
+    * Checkout and place an order via a "Checkout" button.
+
+## Technologies Used
+
+* **React:** The JavaScript library for building the user interface.
+* **React Router:** For client-side routing between the login and item list pages.
+* **Axios:** A promise-based HTTP client for making API calls to the backend.
+
+## Getting Started
+
+### Prerequisites
+
+* Node.js and npm
+* The `shopping-cart-backend` server must be running and accessible at `http://localhost:8080`.
+
+### Setup
+
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/amit-shuklaa/ABCDE-Assignment
+    cd shopping-cart-frontend
+    ```
+
+2.  **Install dependencies:**
+    ```sh
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```sh
+    npm start
+    ```
+    The application will open in your browser at `http://localhost:3000`.
+
+## User Interaction
+
+* **Login:** Use the login form to authenticate with an existing user account.
+* **Items:** The page will display all items fetched from the backend. Clicking an item adds it to your cart.
+* **Cart Button:** Shows a window alert with a list of items currently in your cart (cart_id, item_id).
+* **Order History Button:** Shows a window alert with a list of your placed order IDs.
+* **Checkout Button:** Converts your cart into an order and shows a confirmation message.
